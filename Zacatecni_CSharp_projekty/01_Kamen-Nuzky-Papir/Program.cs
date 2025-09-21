@@ -1,4 +1,4 @@
-﻿namespace _01_Kamen_Nuzky_Papir
+﻿namespace _01_Kámen_nůžky_papír
 {
     internal class Program
     {
@@ -6,14 +6,14 @@
         {
             bool hracChceHrat = true;
 
-            Console.WriteLine("Vítejte ve hře kamen, nuzky, papir! (bez diakritiky)");
+            Console.WriteLine("Vítejte ve hře kámen, nůžky, papír!");
 
             while (hracChceHrat)
             {
                 Console.WriteLine(" ");
-                Console.Write("Zadejte svůj výběr (kamen, nuzky, papir): ");
+                Console.Write("Zadejte svůj výběr (kámen, nůžky, papír): ");
                 string vyberCloveka = Console.ReadLine().ToLower();
-                string[] vyber = { "kamen", "nuzky", "papir" };
+                string[] vyber = { "kámen", "nůžky", "papír" };
                 Random random = new Random();
                 string vyberPocitace = vyber[random.Next(vyber.Length)];
 
@@ -22,40 +22,44 @@
                     Console.WriteLine($"Pocitac vybral: {vyberPocitace}\nRemíza");
 
                 }
-                else if ((vyberCloveka == "kamen" && vyberPocitace == "nuzky") ||
-                       (vyberCloveka == "nuzky" && vyberPocitace == "papir") ||
-                       (vyberCloveka == "papir" && vyberPocitace == "kamen"))
+                else if ((vyberCloveka == "kámen" && vyberPocitace == "nůžky") ||
+                       (vyberCloveka == "nůžky" && vyberPocitace == "papír") ||
+                       (vyberCloveka == "papír" && vyberPocitace == "kámen"))
                 {
                     Console.WriteLine($"Pocitac vybral: {vyberPocitace}\nVyhrál jsi!");
 
                 }
-                else if ((vyberCloveka == "kamen" && vyberPocitace == "papir") ||
-                        (vyberCloveka == "nuzky" && vyberPocitace == "kamen") ||
-                        (vyberCloveka == "papir" && vyberPocitace == "nuzky"))
+                else if ((vyberCloveka == "kámen" && vyberPocitace == "papír") ||
+                        (vyberCloveka == "nůžky" && vyberPocitace == "kámen") ||
+                        (vyberCloveka == "papír" && vyberPocitace == "nůžky"))
                 {
                     Console.WriteLine($"Pocitac vybral: {vyberPocitace}\nProhrál jsi!");
 
                 }
                 else
-                    Console.WriteLine("Neplatný výběr. Zadejte kamen, nuzky nebo papir.");
+                    Console.WriteLine("Neplatný výběr. Zadejte kámen, nůžky nebo papír.");
+                    
 
                 // Hrat znovu?
                 Console.Write("Chcete hrát znovu? (ano/ne): ");
                 string odpoved = Console.ReadLine().ToLower();
-                if (odpoved != "ano")
+                if (odpoved == "ano")
                 {
-                    hracChceHrat = false;
-                    Console.WriteLine("Děkuji za hru!");
+                    // Console.WriteLine(new string('\n', 50));
+                    hracChceHrat = true; Console.WriteLine();
+                }
+                else if (odpoved == "ne")
+                {
+                    hracChceHrat = false; Console.WriteLine("Díky za hraní!");
                 }
                 else
                 {
-                    hracChceHrat = true; Console.WriteLine();
+                    hracChceHrat = true; Console.WriteLine("Neznámý příkaz");
                 }
 
             }
 
         }
-
-                  
+              
     }
 }
