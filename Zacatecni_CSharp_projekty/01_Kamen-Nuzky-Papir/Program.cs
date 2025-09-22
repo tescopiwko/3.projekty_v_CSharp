@@ -10,7 +10,6 @@
 
             while (hracChceHrat)
             {
-                Console.WriteLine(" ");
                 Console.Write("Zadejte svůj výběr (kámen, nůžky, papír): ");
                 string vyberCloveka = Console.ReadLine().ToLower();
                 string[] vyber = { "kámen", "nůžky", "papír" };
@@ -37,29 +36,45 @@
 
                 }
                 else
+                {
                     Console.WriteLine("Neplatný výběr. Zadejte kámen, nůžky nebo papír.");
-                    
+                    continue;
+                        
+                }
+                hracChceHrat = hratZnovu(hracChceHrat);
+                if (hracChceHrat == false)
+                    Console.Write("Děkuji za hru!");
 
-                // Hrat znovu?
+            }
+        }
+        // Hrat znovu?
+        static bool hratZnovu(bool hracChceHrat)
+        {
+            while (true)
+            {
                 Console.Write("Chcete hrát znovu? (ano/ne): ");
                 string odpoved = Console.ReadLine().ToLower();
                 if (odpoved == "ano")
                 {
-                    // Console.WriteLine(new string('\n', 50));
-                    hracChceHrat = true; Console.WriteLine();
+                    Console.Clear();
+                    return true;
                 }
                 else if (odpoved == "ne")
                 {
-                    hracChceHrat = false; Console.WriteLine("Díky za hraní!");
+                    return false;
                 }
                 else
                 {
-                    hracChceHrat = true; Console.WriteLine("Neznámý příkaz");
+                    Console.WriteLine("Neplatná odpověď. Napište 'ano' nebo 'ne'.");
                 }
-
             }
 
-        }
-              
-    }
+
+
+
+
+
+
+        }      
+    }   
 }
