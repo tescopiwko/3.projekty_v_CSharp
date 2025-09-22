@@ -68,13 +68,6 @@
                     Console.WriteLine("Neplatná odpověď. Napište 'ano' nebo 'ne'.");
                 }
             }
-
-
-
-
-
-
-
         }      
     }   
 }
