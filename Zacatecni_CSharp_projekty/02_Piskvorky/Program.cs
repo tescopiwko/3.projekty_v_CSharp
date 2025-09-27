@@ -18,8 +18,18 @@ namespace _02_Piskvorky
             while (hraPokracuje)
             {
                 tahHrace("X");
+                if (kontrolaVyhry("X"))
+                {
+                    Console.WriteLine("Vyhrál hráč X!");
+                    break;
+                }
                 tahHrace("O");
-                
+                if (kontrolaVyhry("O"))
+                {
+                    Console.WriteLine("Vyhrál hráč O!");
+                    break;
+                }
+                kontrolaVyhry("O");
             }
             
             //if (vyberHracX == mrizka[0])
@@ -29,10 +39,26 @@ namespace _02_Piskvorky
      
             
         }
-
+        static bool kontrolaVyhry(string hrac)
+        {       //kontrola vodorovně
+            if ((mrizka[0]== hrac && mrizka[1] == hrac && mrizka[2]== hrac) || 
+                (mrizka[3]== hrac && mrizka[4] == hrac && mrizka[5]== hrac) || 
+                (mrizka[6]== hrac && mrizka[7] == hrac && mrizka[8]== hrac) || 
+                //kontrola svisle
+                (mrizka[0]== hrac && mrizka[3] == hrac && mrizka[6]== hrac) ||
+                (mrizka[1]== hrac && mrizka[4] == hrac && mrizka[7]== hrac) ||
+                (mrizka[2]== hrac && mrizka[5] == hrac && mrizka[8]== hrac) ||
+                //kontrola diagonálně
+                (mrizka[0]== hrac && mrizka[4]== hrac && mrizka[8]== hrac) ||
+                (mrizka[2]== hrac && mrizka[4]== hrac && mrizka[6]==hrac))
+            {
+                return true;
+            }
+            return false;
+        }
         static void tahHrace(string hrac)
         {
-            Console.Write($"{hrac}ový pleja: ");
+            Console.Write($"Tah hráče {hrac}: ");
             string vyberHracX = Console.ReadLine();
             for (int k = 0; k < mrizka.Length; k++)
             {
