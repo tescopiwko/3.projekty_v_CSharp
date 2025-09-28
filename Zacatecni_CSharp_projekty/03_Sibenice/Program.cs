@@ -11,6 +11,8 @@
             //Console.WriteLine(vybraneSlovo);
             string skryteSlovo = new string('_', vybraneSlovo.Length);
             Console.WriteLine(skryteSlovo);
+            int pocetPokusu = 12;
+            
 
         }
 
