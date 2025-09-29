@@ -7,24 +7,28 @@
             List<string> slovaDoSibenice = NactiSlovaZListu();
             Random random = new Random();
             string vybraneSlovo = slovaDoSibenice[random.Next(slovaDoSibenice.Count)];
-            //Console.WriteLine(vybraneSlovo); //*CHEAT*
+            Console.WriteLine(vybraneSlovo); //*CHEAT*
             string skryteSlovo = new string('_', vybraneSlovo.Length);//pretvoreni vybraneho slova na podtrzitka dle poctu pismen
-            Console.WriteLine(skryteSlovo);//vypsani podtrzitek
-            int pocetPokusu = 6;
+            int pocetPokusu = 8;
             List<char> uhodnutaPismena = new List<char>();
 
             while (pocetPokusu > 0)
             {
-                Console.WriteLine("Zadejte písmeno: ");
+                Console.WriteLine(skryteSlovo);//vypsani podtrzitek
+                Console.Write("Zadejte písmeno: ");
                 char pismeno = Console.ReadLine()[0];
                 if (uhodnutaPismena.Contains(pismeno))
                 {
                     Console.WriteLine($"Písmeno {pismeno} už bylo uhodnuto, zadejte jiné.");
                     continue;
                 }
-                uhodnutaPismena.Add(pismeno);
+                if (uhodnutaPismena.Contains(pismeno) && !vybraneSlovo.Contains(pismeno))
+                {
+                    Console.WriteLine($"Písmeno {pismeno} už bylo hádáno, zadejte jiné.");
+                    continue;
+                }
 
-                bool uhadlPismeno = false;//pokud clovek uhadne pismeno skryte slovo se aktualizuje
+                bool uhodlPismeno = false;//pokud clovek uhadne pismeno skryte slovo se aktualizuje
                 char[] skrytePole = skryteSlovo.ToCharArray();
 
                 for (int i = 0; i < vybraneSlovo.Length; i++)
@@ -32,13 +36,13 @@
                     if (vybraneSlovo[i] == pismeno)
                     {
                         skrytePole[i] = pismeno;
-                        uhadlPismeno = true;
+                        uhodlPismeno = true;
                     }
                 }
-                if (uhadlPismeno) //aktualizace skryteho slova
+                if (uhodlPismeno) //aktualizace skryteho slova
                 {
+                    uhodnutaPismena.Add(pismeno);
                     skryteSlovo = new string(skrytePole);
-                    Console.WriteLine($"Správně! Slovo je: {skryteSlovo}");
                     if (skryteSlovo == vybraneSlovo)
                     {
                         Console.WriteLine("Vyhrál jsi!");
@@ -48,6 +52,7 @@
                 else
                 {
                     pocetPokusu--;
+                    uhodnutaPismena.Add(pismeno);
                     Console.WriteLine($"Špatně. Písmeno {pismeno} ve slově není");
                     Console.WriteLine($"Zbývá {pocetPokusu} pokusů");
                 }
