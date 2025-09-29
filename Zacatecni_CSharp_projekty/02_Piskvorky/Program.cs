@@ -18,7 +18,7 @@ namespace _02_Piskvorky
             while (hraPokracuje)
             {
                 tahHrace("X");
-                if (kontrolaRemizy())
+                if (kontrolaRemizy())//kontrola remízy vždy po tahu hráče X protože X vždy končí hru
                 {
                     Console.WriteLine("Remíza!");
                     break;
