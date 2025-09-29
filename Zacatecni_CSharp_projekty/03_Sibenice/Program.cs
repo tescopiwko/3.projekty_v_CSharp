@@ -17,12 +17,12 @@
                 Console.WriteLine(skryteSlovo);//vypsani podtrzitek
                 Console.Write("Zadejte písmeno: ");
                 char pismeno = Console.ReadLine()[0];
-                if (uhodnutaPismena.Contains(pismeno))
+                if (uhodnutaPismena.Contains(pismeno)&& vybraneSlovo.Contains(pismeno))
                 {
                     Console.WriteLine($"Písmeno {pismeno} už bylo uhodnuto, zadejte jiné.");
                     continue;
                 }
-                if (uhodnutaPismena.Contains(pismeno) && !vybraneSlovo.Contains(pismeno))
+                else if (uhodnutaPismena.Contains(pismeno) && !vybraneSlovo.Contains(pismeno))
                 {
                     Console.WriteLine($"Písmeno {pismeno} už bylo hádáno, zadejte jiné.");
                     continue;

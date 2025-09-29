@@ -34,8 +34,6 @@ namespace _02_Piskvorky
                     Console.WriteLine("Vyhrál hráč O!");
                     break;
                 }
-                kontrolaVyhry("O");
-            
         }
         static bool kontrolaVyhry(string hrac)
         {       //kontrola vodorovně
