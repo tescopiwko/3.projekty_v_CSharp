@@ -18,6 +18,11 @@ namespace _02_Piskvorky
             while (hraPokracuje)
             {
                 tahHrace("X");
+                if (kontrolaRemizy())
+                {
+                    Console.WriteLine("Remíza!");
+                    break;
+                }
                 if (kontrolaVyhry("X"))
                 {
                     Console.WriteLine("Vyhrál hráč X!");
@@ -30,44 +35,58 @@ namespace _02_Piskvorky
                     break;
                 }
                 kontrolaVyhry("O");
-            }
-            
-            //if (vyberHracX == mrizka[0])
-            //    mrizka[0] = symbolX;
-            //    VytvoritMrizku();
-
-     
             
         }
         static bool kontrolaVyhry(string hrac)
         {       //kontrola vodorovně
-            if ((mrizka[0]== hrac && mrizka[1] == hrac && mrizka[2]== hrac) || 
-                (mrizka[3]== hrac && mrizka[4] == hrac && mrizka[5]== hrac) || 
-                (mrizka[6]== hrac && mrizka[7] == hrac && mrizka[8]== hrac) || 
+            if ((mrizka[0] == hrac && mrizka[1] == hrac && mrizka[2] == hrac) ||
+                (mrizka[3] == hrac && mrizka[4] == hrac && mrizka[5] == hrac) ||
+                (mrizka[6] == hrac && mrizka[7] == hrac && mrizka[8] == hrac) ||
                 //kontrola svisle
-                (mrizka[0]== hrac && mrizka[3] == hrac && mrizka[6]== hrac) ||
-                (mrizka[1]== hrac && mrizka[4] == hrac && mrizka[7]== hrac) ||
-                (mrizka[2]== hrac && mrizka[5] == hrac && mrizka[8]== hrac) ||
+                (mrizka[0] == hrac && mrizka[3] == hrac && mrizka[6] == hrac) ||
+                (mrizka[1] == hrac && mrizka[4] == hrac && mrizka[7] == hrac) ||
+                (mrizka[2] == hrac && mrizka[5] == hrac && mrizka[8] == hrac) ||
                 //kontrola diagonálně
-                (mrizka[0]== hrac && mrizka[4]== hrac && mrizka[8]== hrac) ||
-                (mrizka[2]== hrac && mrizka[4]== hrac && mrizka[6]==hrac))
+                (mrizka[0] == hrac && mrizka[4] == hrac && mrizka[8] == hrac) ||
+                (mrizka[2] == hrac && mrizka[4] == hrac && mrizka[6] == hrac))
             {
                 return true;
             }
             return false;
         }
+        static bool kontrolaRemizy()
+        {
+                // Projdeme VŠECHNY prvky v poli 'mrizka'
+            for (int i = 0; i < mrizka.Length; i++)
+            {
+                string policko = mrizka[i];
+
+                if (int.TryParse(policko, out _))
+                {
+                     return false;
+                }
+            }
+            return true;
+        }
+        }
         static void tahHrace(string hrac)
         {
-            Console.Write($"Tah hráče {hrac}: ");
-            string vyberHracX = Console.ReadLine();
-            for (int k = 0; k < mrizka.Length; k++)
+            bool platnyTah = false;
+            while (!platnyTah)
             {
-                if (vyberHracX == mrizka[k])
+                Console.Write($"Tah hráče {hrac}: ");
+                string vyberHrac = Console.ReadLine();
+                for (int k = 0; k < mrizka.Length; k++)
                 {
-                    mrizka[k] = hrac;
-                    VytvoritMrizku();
+                    if (vyberHrac == mrizka[k])
+                    {
+                        mrizka[k] = hrac;
+                        VytvoritMrizku();
+                        platnyTah = true;
+                        return;
+                    }
                 }
-
+                Console.WriteLine("Neplatný tah, zkus to znovu.");
             }
         }
 
