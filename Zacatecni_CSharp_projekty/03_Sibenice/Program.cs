@@ -7,7 +7,7 @@
             List<string> slovaDoSibenice = NactiSlovaZListu();
             Random random = new Random();
             string vybraneSlovo = slovaDoSibenice[random.Next(slovaDoSibenice.Count)];
-            Console.WriteLine(vybraneSlovo); //*CHEAT*
+            //Console.WriteLine(vybraneSlovo); //*CHEAT*
             string skryteSlovo = new string('_', vybraneSlovo.Length);//pretvoreni vybraneho slova na podtrzitka dle poctu pismen
             int pocetPokusu = 8;
             List<char> uhodnutaPismena = new List<char>();
@@ -45,7 +45,7 @@
                     skryteSlovo = new string(skrytePole);
                     if (skryteSlovo == vybraneSlovo)
                     {
-                        Console.WriteLine("Vyhrál jsi!");
+                        Console.WriteLine($"Vyhrál jsi! Slovo bylo {vybraneSlovo}!");
                         break;
                     }
                 }
@@ -58,7 +58,7 @@
                 }
                 if (pocetPokusu == 0)
                 {
-                    Console.WriteLine($"Prohrál jsi! Slovo bylo {vybraneSlovo}!");
+                    Console.WriteLine($"Prohrál jsi! Slovo bylo {vybraneSlovo}");
                     break;
                 }
             }
