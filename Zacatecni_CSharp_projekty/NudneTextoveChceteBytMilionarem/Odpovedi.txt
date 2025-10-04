@@ -1,2 +1,15 @@
-4
-15
+B
+A
+D
+A
+C
+C
+B
+D
+C
+D
+A
+B
+A
+C
+D

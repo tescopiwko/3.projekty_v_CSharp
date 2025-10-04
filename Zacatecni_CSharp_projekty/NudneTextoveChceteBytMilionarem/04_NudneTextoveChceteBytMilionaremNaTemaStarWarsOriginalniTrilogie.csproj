@@ -8,6 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Update="Odmeny.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Odpovedi.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

@@ -1,2 +1,15 @@
-Kolik je 2 + 2?
-Kolik je 5 + 10?
+﻿Jak se jmenuje hlavní postava? (A: Obi-Wan, B: Luke, C: Darth Vader, D: Yoda):
+Jaký s uvedených droidů přenášel plány Hvězdy smrti? (A: R2-D2, B: C-3PO, C: BB-8, D: K-2SO):
+Jak se jmenuje planeta, na které Luke Skywalker vyrůstal? (A: Kamino, B: Naboo, C: Coruscant, D: Tatooine):
+Co za druh tvora je Chewbacca? (A: Wookiee, B: Ewok, C: Jawa, D: Hutt):
+Jak se jmenuje loď Hana Sola? (A: Razor Crest, B: Slave I, C: Millennium Falcon, D: X-Wing):
+Jak se jmenuje sněžná planeta na které se nachází základna povstalců v Epizodě V? (A: Jakku, B: Endor, C: Hoth, D: Tatooine):
+Koho Luke šel hledat na planetu Dagobah? (A: Obi-Wana, B: Yodu, C: Hana Sola, D: Císaře Palpatina):
+Komu Han Solo dluží peníze? (A: Darth Vader, B: Boba Fettovi, C: Císaři Palpatinovi, D: Jabba the Hutt):
+Kdo je v epizodě IV zamrazen do karbonitu? (A: Luke Skywalker, B: Obi-Wan Kenobi, C: Han Solo, D: Chewbacca):
+Jaké je jméno lovce odměn, který sleduje Hana Sola s pomocí sledovače na Millennium Falcon? (A: Bossk, B: Dengar, C: IG-88, D: Boba Fett):
+Jak se jmenuje stvoření, které Luke porazí v Jabbově paláci? (A: Rancor, B: Wampa, C: Sarlacc, D: Krayt):
+Z jaké planety čerpá Imperium v epizodě VI energii na výrobu štítů? (A: Tatooine, B: Endor, C: Hoth, D: Geonosis):
+Co za tvory žije na měsíci Endoru? (A: Ewokové, B: Jawové, C: Wookieové, D: Tuskeni):
+Která z těchto postav pronese hlášku "Its a trap!"? (A: Lando Calrissian, B: Han Solo, C: Admiral Ackbar, D: C-3PO):
+Kdo nakonci epizody VI vhodí císaře Palpatina do reaktoru Hvězdy smrti? (A: Luke Skywalker, B: Han Solo, C: Chewbacca, D: Darth Vader): 

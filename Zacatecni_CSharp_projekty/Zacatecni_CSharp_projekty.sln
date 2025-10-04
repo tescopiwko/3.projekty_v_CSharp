@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_Piskvorky", "02_Piskvork
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Sibenice", "03_Sibenice\03_Sibenice.csproj", "{125F5737-1454-DFF6-D1AD-49F2A8523022}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_NudneTextoveChceteBytMilionarem", "NudneTextoveChceteBytMilionarem\04_NudneTextoveChceteBytMilionarem.csproj", "{E6F9BBA4-0B36-4C5C-8C98-F1DB50DB312D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_NudneTextoveChceteBytMilionaremNaTemaStarWarsOriginalniTrilogie", "NudneTextoveChceteBytMilionarem\04_NudneTextoveChceteBytMilionaremNaTemaStarWarsOriginalniTrilogie.csproj", "{E6F9BBA4-0B36-4C5C-8C98-F1DB50DB312D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
