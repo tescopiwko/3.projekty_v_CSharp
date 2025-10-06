@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Sibenice", "03_Sibenice\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_NudneTextoveChceteBytMilionaremNaTemaStarWarsOriginalniTrilogie", "04_NudneTextoveChceteBytMilionarem\04_NudneTextoveChceteBytMilionaremNaTemaStarWarsOriginalniTrilogie.csproj", "{615A47F9-1ED1-6C97-EF2D-8C34349A8349}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_PruznyCtverecek", "05_PruznyCtverecek\05_PruznyCtverecek.csproj", "{B76502F5-ACF3-41BD-B9A8-8195451E4BB9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{615A47F9-1ED1-6C97-EF2D-8C34349A8349}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{615A47F9-1ED1-6C97-EF2D-8C34349A8349}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{615A47F9-1ED1-6C97-EF2D-8C34349A8349}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B76502F5-ACF3-41BD-B9A8-8195451E4BB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B76502F5-ACF3-41BD-B9A8-8195451E4BB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B76502F5-ACF3-41BD-B9A8-8195451E4BB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B76502F5-ACF3-41BD-B9A8-8195451E4BB9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
