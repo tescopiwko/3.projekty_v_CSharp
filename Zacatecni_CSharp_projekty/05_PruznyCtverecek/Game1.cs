@@ -15,9 +15,9 @@ namespace _05_PruznyCtverecek
         private int poziceY;
         private int Sirka;
         private int Vyska;
-        private Color barva = Color.Green;
+        private Color barva = Color.Red;
         private float rychlostY;
-        private float gravitece;
+        private float gravitace;
         private float pruznost;
         private bool gravitaceOn;
         
@@ -41,7 +41,7 @@ namespace _05_PruznyCtverecek
             Vyska = 50;
 
             //Vlastnosti čtverce
-            gravitece = 0.5f;
+            gravitace = 0.5f;
             rychlostY = 0f;
             pruznost = 0.7f;
             gravitaceOn = true;
@@ -72,6 +72,19 @@ namespace _05_PruznyCtverecek
             // TODO: Add your update logic here
 
             base.Update(gameTime);
+            if (gravitaceOn)
+            {
+                rychlostY += gravitace;
+                poziceY += (int)rychlostY;
+                //Odraz od země
+                if (poziceY + Vyska >= _graphics.PreferredBackBufferHeight)
+                {
+                    poziceY = _graphics.PreferredBackBufferHeight - Vyska;
+                    rychlostY = -rychlostY * pruznost;
+
+                }
+            }
+
         }
 
         protected override void Draw(GameTime gameTime)
