@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.36414.22
+# Visual Studio Version 18
+VisualStudioVersion = 18.1.11312.151 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_Kamen-Nuzky-Papir", "01_Kamen-Nuzky-Papir\01_Kamen-Nuzky-Papir.csproj", "{B79BEB1F-27A9-4954-80D2-2941E3517C11}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_PruznyCtverecek", "05_PruznyCtverecek\05_PruznyCtverecek.csproj", "{B76502F5-ACF3-41BD-B9A8-8195451E4BB9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06_UhodniCislo", "06_UhodniCislo\06_UhodniCislo.csproj", "{6B08D111-599C-4A51-916E-F19AF0797F8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07_WPF-Kalkulacka", "..\..\..\..\Desktop\C#\mini_projekty_v_CSharp\Zacatecni_CSharp_projekty\07_WPF-Kalkulacka\07_WPF-Kalkulacka.csproj", "{81AEF19D-0CB1-5535-B50E-479EEA99BB8F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{6B08D111-599C-4A51-916E-F19AF0797F8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B08D111-599C-4A51-916E-F19AF0797F8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B08D111-599C-4A51-916E-F19AF0797F8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81AEF19D-0CB1-5535-B50E-479EEA99BB8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81AEF19D-0CB1-5535-B50E-479EEA99BB8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81AEF19D-0CB1-5535-B50E-479EEA99BB8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81AEF19D-0CB1-5535-B50E-479EEA99BB8F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
