@@ -99,6 +99,10 @@ namespace _07_WPF_Kalkulacka
         {
            
             double aktualniCislo = Convert.ToDouble(Display.Text);
+            if (aktualniCislo == 0)
+            {
+                return;
+            }
             double vysledek = aktualniCislo * -1;
             string zpatkyNaString = Convert.ToString(vysledek);
             Display.Text = "";
@@ -134,6 +138,41 @@ namespace _07_WPF_Kalkulacka
             cekaniNaDruheCislo = true;
         }
 
+        private void Procento(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void NaMinusPrvou(object sender, RoutedEventArgs e)
+        {
+            double aktualniCislo = Convert.ToDouble(Display.Text);
+            double vysledek = 1 / aktualniCislo;
+            string zpatkyNaString = Convert.ToString(vysledek);
+            Display.Text = "";
+            Display.Text += zpatkyNaString;
+        }
+
+        private void DruhaOdmocnina(object sender, RoutedEventArgs e)
+        {
+            double aktualniCislo = Convert.ToDouble(Display.Text);
+            double zakladOdmocniny = 0;
+
+            while (zakladOdmocniny * zakladOdmocniny < aktualniCislo)
+            {
+                zakladOdmocniny += 0.001;
+            }
+
+            string zpatkyNaString = Convert.ToString(zakladOdmocniny);
+            Display.Text = "";
+            Display.Text += zpatkyNaString;
+
+        }
+
+        private void ObecnaMocnina(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void rovnaSe(object sender, RoutedEventArgs e)
         {
             druheCislo = Convert.ToDouble(Display.Text);
@@ -160,28 +199,6 @@ namespace _07_WPF_Kalkulacka
             Display.Text = vysledek.ToString();
         }
 
-        private void Procento(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void NaMinusPrvou(object sender, RoutedEventArgs e)
-        {
-            double aktualniCislo = Convert.ToDouble(Display.Text);
-            double vysledek = 1 / aktualniCislo;
-            string zpatkyNaString = Convert.ToString(vysledek);
-            Display.Text = "";
-            Display.Text += zpatkyNaString;
-        }
-
-        private void DruhaOdmocnina(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ObecnaMocnina(object sender, RoutedEventArgs e)
-        {
-            
-        }
+        
     }
 }
