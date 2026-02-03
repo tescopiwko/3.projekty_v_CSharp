@@ -24,7 +24,7 @@ namespace _07_WPF_Kalkulacka
         string operace = "";
 
         bool aktivniDesetinnaCarka = false;
-        bool cekaniNaDruheCislo = false;
+        bool cekaniNaDalsiCislo = false;
 
         public MainWindow()
         {
@@ -36,10 +36,10 @@ namespace _07_WPF_Kalkulacka
         {
             Button btn = (Button)sender;
             string cislicko = btn.Content.ToString();
-            if (cekaniNaDruheCislo)
+            if (cekaniNaDalsiCislo)
             {
                 Display.Text = cislicko;
-                cekaniNaDruheCislo = false;
+                cekaniNaDalsiCislo = false;
                 aktivniDesetinnaCarka = false;
             }
 
@@ -113,14 +113,14 @@ namespace _07_WPF_Kalkulacka
         {
             prvniCislo = Convert.ToDouble(Display.Text);
             operace = "+";
-            cekaniNaDruheCislo = true;
+            cekaniNaDalsiCislo = true;
         }
 
         private void Minus(object sender, RoutedEventArgs e)
         {
             prvniCislo = Convert.ToDouble(Display.Text);
             operace = "-";
-            cekaniNaDruheCislo = true;
+            cekaniNaDalsiCislo = true;
 
         }
 
@@ -128,19 +128,19 @@ namespace _07_WPF_Kalkulacka
         {
             prvniCislo = Convert.ToDouble(Display.Text);
             operace = "*";
-            cekaniNaDruheCislo = true;
+            cekaniNaDalsiCislo = true;
         }
 
         private void Deleno(object sender, RoutedEventArgs e)
         {
             prvniCislo = Convert.ToDouble(Display.Text);
             operace = "/";
-            cekaniNaDruheCislo = true;
+            cekaniNaDalsiCislo = true;
         }
 
         private void Procento(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void NaMinusPrvou(object sender, RoutedEventArgs e)
@@ -182,19 +182,21 @@ namespace _07_WPF_Kalkulacka
                 vysledek = prvniCislo - druheCislo;
             }
             
-            if (operace == "+")
+            else if (operace == "+")
             {
                 vysledek = prvniCislo + druheCislo;
+               
             }
             
-            if (operace == "*")
+            else if (operace == "*")
             {
                 vysledek = prvniCislo * druheCislo;
             }
 
-            if (operace == "/")
+            else if (operace == "/")
             {
                 vysledek = prvniCislo / druheCislo;
+                
             }
             Display.Text = vysledek.ToString();
         }
