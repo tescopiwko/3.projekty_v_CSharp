@@ -24,6 +24,7 @@ namespace _07_WPF_Kalkulacka
         string operace = "";
 
         bool aktivniDesetinnaCarka = false;
+        bool cekaniNaDruheCislo = false;
 
         public MainWindow()
         {
@@ -35,8 +36,14 @@ namespace _07_WPF_Kalkulacka
         {
             Button btn = (Button)sender;
             string cislicko = btn.Content.ToString();
+            if (cekaniNaDruheCislo)
+            {
+                Display.Text = cislicko;
+                cekaniNaDruheCislo = false;
+                aktivniDesetinnaCarka = false;
+            }
 
-            if (Display.Text == "0")
+            else if (Display.Text == "0")
             {
                 Display.Text = cislicko;
             }
@@ -102,7 +109,7 @@ namespace _07_WPF_Kalkulacka
         {
             prvniCislo = Convert.ToDouble(Display.Text);
             operace = "+";
-            Display.Text = "0";
+            cekaniNaDruheCislo = true;
         }
 
         private void Minus(object sender, RoutedEventArgs e)
