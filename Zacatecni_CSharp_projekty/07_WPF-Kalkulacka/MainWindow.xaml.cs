@@ -167,7 +167,11 @@ namespace _07_WPF_Kalkulacka
 
         private void NaMinusPrvou(object sender, RoutedEventArgs e)
         {
-
+            double aktualniCislo = Convert.ToDouble(Display.Text);
+            double vysledek = 1 / aktualniCislo;
+            string zpatkyNaString = Convert.ToString(vysledek);
+            Display.Text = "";
+            Display.Text += zpatkyNaString;
         }
 
         private void DruhaOdmocnina(object sender, RoutedEventArgs e)
@@ -177,7 +181,7 @@ namespace _07_WPF_Kalkulacka
 
         private void ObecnaMocnina(object sender, RoutedEventArgs e)
         {
-
+            
         }
     }
 }
