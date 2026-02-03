@@ -57,7 +57,7 @@ namespace _07_WPF_Kalkulacka
 
         private void Backspace(object sender, RoutedEventArgs e)
         {
-            Button btn = (Button)sender;
+           
             if (Display.Text.Length > 0)
             {
                 Display.Text = Display.Text.Remove(Display.Text.Length - 1, 1);
@@ -70,7 +70,7 @@ namespace _07_WPF_Kalkulacka
 
         private void Delete(object sender, RoutedEventArgs e)
         {
-            Button btn = (Button)sender;
+          
             Display.Text = "0";
         }
 
@@ -87,7 +87,7 @@ namespace _07_WPF_Kalkulacka
 
         private void naDruhou(object sender, RoutedEventArgs e)
         {
-            Button btn = (Button)sender;
+            
             double aktualniCislo = Convert.ToDouble(Display.Text);
             double vysledek = aktualniCislo * aktualniCislo;
             string zpatkyNaString = Convert.ToString(vysledek);
@@ -97,7 +97,7 @@ namespace _07_WPF_Kalkulacka
 
         private void Negace(object sender, RoutedEventArgs e)
         {
-            Button btn = (Button)sender;
+           
             double aktualniCislo = Convert.ToDouble(Display.Text);
             double vysledek = aktualniCislo * -1;
             string zpatkyNaString = Convert.ToString(vysledek);
