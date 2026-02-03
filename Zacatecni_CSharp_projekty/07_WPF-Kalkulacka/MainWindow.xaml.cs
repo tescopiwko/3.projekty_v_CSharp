@@ -159,5 +159,25 @@ namespace _07_WPF_Kalkulacka
             }
             Display.Text = vysledek.ToString();
         }
+
+        private void Procento(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void NaMinusPrvou(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DruhaOdmocnina(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ObecnaMocnina(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
