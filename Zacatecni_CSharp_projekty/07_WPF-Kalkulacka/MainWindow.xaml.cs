@@ -116,18 +116,22 @@ namespace _07_WPF_Kalkulacka
         {
             prvniCislo = Convert.ToDouble(Display.Text);
             operace = "-";
-            Display.Text = "0";
+            cekaniNaDruheCislo = true;
 
         }
 
         private void Krat(object sender, RoutedEventArgs e)
         {
-
+            prvniCislo = Convert.ToDouble(Display.Text);
+            operace = "*";
+            cekaniNaDruheCislo = true;
         }
 
         private void Deleno(object sender, RoutedEventArgs e)
         {
-
+            prvniCislo = Convert.ToDouble(Display.Text);
+            operace = "/";
+            cekaniNaDruheCislo = true;
         }
 
         private void rovnaSe(object sender, RoutedEventArgs e)
@@ -142,6 +146,16 @@ namespace _07_WPF_Kalkulacka
             if (operace == "+")
             {
                 vysledek = prvniCislo + druheCislo;
+            }
+            
+            if (operace == "*")
+            {
+                vysledek = prvniCislo * druheCislo;
+            }
+
+            if (operace == "/")
+            {
+                vysledek = prvniCislo / druheCislo;
             }
             Display.Text = vysledek.ToString();
         }
